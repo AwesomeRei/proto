@@ -32,9 +32,9 @@ echo 'Generating Go code from protobuf...'
 # do
     echo "Process proto files in: $v"
     # protos="$v/*.proto"
-protoc -I. -I${GRPC_GW_PROTO_PATH} --go_out=go $1     
-protoc -I. -I${GRPC_GW_PROTO_PATH} --go-grpc_out=go $1
-protoc -I. -I${GRPC_GW_PROTO_PATH} --grpc-gateway_out go $1
+protoc -I . -I${GRPC_GW_PROTO_PATH} --go_out=go $1     
+protoc -I . -I${GRPC_GW_PROTO_PATH} --go-grpc_out=go $1
+protoc -I . -I${GRPC_GW_PROTO_PATH} --grpc-gateway_out go $1
 
     # protoc $protos -I${PROTO_PATH} -I. -I${GRPC_GW_PROTO_PATH} --go_out=plugins=grpc:${GO_OUT} || exit 1
     # protoc $protos -I${PROTO_PATH} -I. -I${GRPC_GW_PROTO_PATH} --grpc-gateway_out=${GO_OUT} || exit 1
